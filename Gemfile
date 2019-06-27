@@ -25,6 +25,7 @@ group :development do
   gem 'capistrano'
   gem 'capistrano-bundler'
   gem 'capistrano-passenger', '>= 0.1.1'
+  gem 'capistrano-yarn'
   gem 'capistrano-rails'
   gem 'capistrano-rvm'
   gem 'capistrano-figaro-yml', '~> 1.0.2'

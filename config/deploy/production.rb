@@ -1,7 +1,7 @@
-server "ec2-18-191-218-29.us-east-2.compute.amazonaws.com", roles: %w{app db web}
+server "139.59.75.129", roles: %w{app db web}
 set :ssh_options, {
   auth_methods: %w(publickey),
-  keys: %w(/home/sreedev/Desktop/projects/sreedev_prod/dev_prod.pem),
+  keys: %w(/home/sreedev/ssh/id_rsa.pub),
   forward_agent: true,
-  user: 'ubuntu'
+  user: 'sreedev'
 }
