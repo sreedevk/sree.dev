@@ -15,4 +15,6 @@
 //= require turbolinks
 //= require jquery/dist/jquery
 //= require bootstrap/dist/js/bootstrap
+//= require bootstrap/dist/js/bootstrap
+//= require nprogress/nprogress
 //= require_tree .

@@ -19,33 +19,14 @@
 <header class="navigation fixed-top">
   <nav class="navbar navbar-expand-lg navbar-dark">
     <a class="navbar-brand font-tertiary h3" href="index.html">
-      <span style="text-decoration: underline overline dotted red; color: red;">S</span>
-      <%#= image_tag 'logo.png', width: 50 %>
+      <i class="ti-shortcode" style="font-weight: 800; font-size: 50px;"></i>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
       aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse text-center" id="navigation">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/about">about</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.devtechnica.com">Blog</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/resume_of_sreedev_kodichath.pdf" style="color: #FA9E2E;" download>Resume</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/contact">Contact</a>
-        </li>
-      </ul>
-    </div>
+    <%=render partial: 'navigation'%> 
   </nav>
 </header>
 
@@ -54,7 +35,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-11 mx-auto">
-        <h1 class="text-white font-tertiary">
+        <h1 class="text-white font-tertiary" style="top: -0px;">
           SREEDEV<br>KODICHATH<br>
           <small style="font-size: 25px; margin-top: -15px;">
             Software Engineer
@@ -93,10 +74,10 @@
   </div>
   <!-- social icon -->
   <ul class="list-unstyled ml-5 mt-3 position-relative zindex-1">
-    <li class="mb-3"><a class="text-white" href="#"><i class="ti-facebook"></i></a></li>
-    <li class="mb-3"><a class="text-white" href="#"><i class="ti-instagram"></i></a></li>
-    <li class="mb-3"><a class="text-white" href="#"><i class="ti-dribbble"></i></a></li>
-    <li class="mb-3"><a class="text-white" href="#"><i class="ti-twitter"></i></a></li>
+    <li class="mb-3"><a class="text-white" href="https://www.facebook.com/sreedevness" target="_blank"><i class="ti-facebook"></i></a></li>
+    <li class="mb-3"><a class="text-white" href="https://www.instagram.com/sreedevness/" target="_blank"><i class="ti-instagram"></i></a></li>
+    <li class="mb-3"><a class="text-white" href="#" target="_blank"><i class="ti-github"></i></a></li>
+    <li class="mb-3"><a class="text-white" href="#" target="_blank"><i class="ti-twitter"></i></a></li>
   </ul>
   <!-- /social icon -->
 </section>
@@ -276,7 +257,6 @@
 <!-- /services -->
 
 <!-- portfolio -->
-<%if false%>
 <section class="section">
   <div class="container">
     <div class="row">
@@ -341,141 +321,43 @@
 <!-- /portfolio -->
 
 <!-- testimonial -->
-<section class="section bg-primary position-relative testimonial-bg-shapes">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 text-center">
-        <h2 class="section-title text-white mb-5">Testimonials</h2>
-      </div>
-      <div class="col-lg-10 mx-auto testimonial-slider">
-        <!-- slider-item -->
-        <div class="text-center testimonial-content">
-          <i class="ti-quote-right text-white icon mb-4 d-inline-block"></i>
-          <p class="text-white mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <strong>quis nostrud exercitation
-              ullamco laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit
-            in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-          <%= image_tag "testimonial/client-1.png", class: "img-fluid rounded-circle mb-4 d-inline-block" %>
-          <h4 class="text-white">Jesica Gomez</h4>
-          <h6 class="text-light mb-4">CEO, Funder</h6>
-        </div>
-        <!-- slider-item -->
-        <div class="text-center testimonial-content">
-          <i class="ti-quote-right text-white icon mb-4 d-inline-block"></i>
-          <p class="text-white mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <strong>quis nostrud exercitation
-              ullamco
-              laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit in
-            voluptate velit
-            esse cillum dolore eu fugiat nulla pariatur.</p>
-          <%= image_tag "testimonial/client-1.png", class: "img-fluid rounded-circle mb-4 d-inline-block" %>
-          <h4 class="text-white">Jesica Gomez</h4>
-          <h6 class="text-light mb-4">CEO, Funder</h6>
-        </div>
-        <!-- slider-item -->
-        <div class="text-center testimonial-content">
-          <i class="ti-quote-right text-white icon mb-4 d-inline-block"></i>
-          <p class="text-white mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <strong>quis nostrud exercitation
-              ullamco
-              laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit in
-            voluptate velit
-            esse cillum dolore eu fugiat nulla pariatur.</p>
-          <%= image_tag "testimonial/client-1.png", class: "img-fluid rounded-circle mb-4 d-inline-block" %>
-          <h4 class="text-white">Jesica Gomez</h4>
-          <h6 class="text-light mb-4">CEO, Funder</h6>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- bg shapes -->
-  <%= image_tag "backgrounds/map.png", class: "img-fluid bg-map" %>
-  <%= image_tag "illustrations/dots-group-v.png", class: "img-fluid bg-shape-1img-fluid bg-map" %>
-  <%= image_tag "illustrations/leaf-orange.png", class: "img-fluid bg-shape-2" %>
-  <%= image_tag "illustrations/dots-group-sm.png", class: "img-fluid bg-shape-3" %>
-  <%= image_tag "illustrations/leaf-pink-round.png", class: "img-fluid bg-shape-4" %>
-  <%= image_tag "illustrations/leaf-cyan.png", class: "img-fluid bg-shape-5" %>
-</section>
+<% if @testimonials.present? %>
+  <%= render partial: 'testimonial', locals: {testimonials: @testimonials}%>
+<% end %>
 <!-- /testimonial -->
 
 <!-- client logo slider -->
-<section class="section pb-0">
-  <div class="container">
-    <div class="client-logo-slider d-flex align-items-center">
-      <a href="#" class="text-center d-block outline-0 p-4">
-        <%= image_tag "clients-logo/client-logo-1.png", class: "d-unset img-fluid" %>
-      </a>
-      <a href="#" class="text-center d-block outline-0 p-4">
-        <%= image_tag "clients-logo/client-logo-2.png", class: "d-unset img-fluid" %>
-      </a>
-      <a href="#" class="text-center d-block outline-0 p-4">
-        <%= image_tag "clients-logo/client-logo-3.png", class: "d-unset img-fluid" %>
-      </a>
-      <a href="#" class="text-center d-block outline-0 p-4">
-        <%= image_tag "clients-logo/client-logo-4.png", class: "d-unset img-fluid" %>
-      </a>
-      <a href="#" class="text-center d-block outline-0 p-4">
-        <%= image_tag "clients-logo/client-logo-5.png", class: "d-unset img-fluid" %>
-      </a>
-      <a href="#" class="text-center d-block outline-0 p-4">
-        <%= image_tag "clients-logo/client-logo-1.png", class: "d-unset img-fluid" %>
-      </a>
-    </div>
-  </div>
-</section>
+<%#= render partial: 'client_logos'%>
 <!-- /client logo slider -->
 
 <!-- blog -->
-<section class="section">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 text-center">
-        <h2 class="section-title">Blogs</h2>
-      </div>
-      <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-        <article class="card shadow">
-          <%= image_tag "blog/post-3.jpg", class: "rounded card-img-top" %>
-          <div class="card-body">
-            <h4 class="card-title"><a class="text-dark" href="blog-single.html">Amazon increase income 1.5 Million</a>
-            </h4>
-            <p class="cars-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-              incididunt ut labore et
-              dolore magna aliqua.</p>
-            <a href="blog-single.html" class="btn btn-xs btn-primary">Read More</a>
+<% if @blog_posts.present? %>
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="section-title">Blogs</h2>
+        </div>
+        <% @blog_posts.each do |post|%>
+          <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+            <article class="card blog_post_card shadow">
+              <%= image_tag post.image, class: "rounded card-img-top", style: "height: 300px;" %>
+              <div class="card-body">
+                <h4 class="card-title"><a class="text-dark" href="blog-single.html"><%=post.title%></a>
+                </h4>
+                <p class="card-text"><%=post.abstract%></p>
+              </div>
+              <div class="card-footer" style="padding: 0px;">
+                <a href="<%=post.url%>" target="_blank" class="btn btn-sm form-control btn-tertiary" style="padding-top: 15px;">Read More</a>
+              </div>
+            </article>
           </div>
-        </article>
-      </div>
-      <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-        <article class="card shadow">
-          <%= image_tag "blog/post-4.jpg", class: "rounded card-img-top" %>
-          <div class="card-body">
-            <h4 class="card-title"><a class="text-dark" href="blog-single.html">Amazon increase income 1.5 Million</a>
-            </h4>
-            <p class="cars-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-              incididunt ut labore et
-              dolore magna aliqua.</p>
-            <a href="blog-single.html" class="btn btn-xs btn-primary">Read More</a>
-          </div>
-        </article>
-      </div>
-      <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-        <article class="card shadow">
-          <%= image_tag "blog/post-2.jpg", class: "rounded card-img-top" %>
-          <div class="card-body">
-            <h4 class="card-title"><a class="text-dark" href="blog-single.html">Amazon increase income 1.5 Million</a>
-            </h4>
-            <p class="cars-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-              incididunt ut labore et
-              dolore magna aliqua.</p>
-            <a href="blog-single.html" class="btn btn-xs btn-primary">Read More</a>
-          </div>
-        </article>
+        <% end %>  
       </div>
     </div>
-  </div>
-</section>
-<!-- /blog -->
+  </section>
 <% end %>
+<!-- /blog -->
 <!-- contact -->
 <section class="section section-on-footer" data-background="images/backgrounds/bg-dots.png">
   <div class="container">

@@ -9,3 +9,9 @@
 @import 'templates/blog';
 @import 'templates/about';
 @import 'templates/portfolio';
+@import 'nprogress/nprogress.css';
+
+.testimonial-slider p { font-weight: 800; }
+#nprogress .bar { background: white; }
+#nprogress .spinner-icon { border-top-color: white; border-left-color: white; }
+.blog_post_card { height: 600px;}
