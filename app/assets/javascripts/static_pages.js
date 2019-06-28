@@ -24,20 +24,6 @@ $(document).on('turbolinks:render', function() {
     });
   });
 
-  // background color
-  $('[data-color]').each(function () {
-    $(this).css({
-      'background-color': $(this).data('color')
-    });
-  });
-
-  // progress bar
-  $('[data-progress]').each(function () {
-    $(this).css({
-      'bottom': $(this).data('progress')
-    });
-  });
-
 
   /* ########################################### hero parallax ############################################## */
   window.onload = function () {
@@ -144,6 +130,22 @@ $(document).ready(function(){
         }
       }
     ]
+  });
+
+  // background color
+  $('[data-color]').each(function () {
+    $(this).css({
+      'background-color': $(this).data('color'),
+    });
+  });
+
+  // progress bar
+  $('[data-progress]').each(function () {
+    var relative_displacement = $(this).data('progress');
+    var absolute_displacement = (relative_displacement * 150)/100
+    $(this).css({
+      'bottom': absolute_displacement + 'px'
+    });
   });
 
   //Shuffle js filter and masonry
