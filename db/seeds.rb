@@ -12,7 +12,7 @@ Config.find_or_create_by(config_type: Config::MENU).update(
     { display_name: "Home", url: "/", link_options: [] },
     { display_name: "About", url: "/about", link_options: [] },
     { display_name: "Blog", url: "https://www.devtechnica.com", link_options: ["target=\"_blank\""] },
-    { display_name: "Resume", url: "https://www.devtechnica.com", link_options: ["download", "style=\"color: #FA9E2E;\""] },
+    { display_name: "Resume", url: "/resume_of_sreedev_kodichath.pdf", link_options: ["download", "style=\"color: #FA9E2E;\""] },
     { display_name: "Contact", url: "/contact", link_options: [] }
   ]
 )
@@ -27,6 +27,9 @@ Config.find_or_create_by(config_type: Config::PROFILE).update(
     alt_mobile: "+91-7760840660",
     address: "Bengaluru, India.",
     basic_intro: "I'm a passionate software engineer based in <i>Bengaluru, <small> KA (IN)</small></i>, focused on innovating viable, robust and user-focused solutions across industries by way of building high quality web applications and backend services for various platforms.",
+    about: "<p>Hi I am <strong>Sreedev Kodichath</strong> a software engineer current working in <strong>Bengaluru, India</strong>. Programming is not just a profession to me. I thrive on the pleasure in innovating and implementing software solutions across industries. </p>
+        <p>My work has never been restricted to a single platform or industry and this I believe has given me a plethora opportunities to expand my horizons expiditiously </p>
+        <p>I am an ardent adovacate of open source software and strongly believe that it has the power to work miracles. Moreover, the transparency offered by open source software is necessary to abolish the stereotypical skepticism associated with technology and gadgetry. </p>"
   }
 )
 

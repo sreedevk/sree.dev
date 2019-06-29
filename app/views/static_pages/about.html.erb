@@ -1,0 +1,33 @@
+<section class="page-title-alt bg-primary position-relative">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="text-white font-tertiary">About Me</h1>
+      </div>
+    </div>
+  </div>
+  <!-- background shapes -->
+  <%= image_tag "illustrations/leaf-bg-top.png", class: "bg-shape-1 w-100"%>
+  <%= image_tag "illustrations/dots-group-sm.png", class: "bg-shape-2"%>
+  <%= image_tag "illustrations/leaf-yellow.png", class: "bg-shape-3"%>
+  <%= image_tag "illustrations/leaf-orange.png", class: "bg-shape-4"%>
+  <%= image_tag "illustrations/dots-group-cyan.png", class: "bg-shape-5"%>
+  <%= image_tag "illustrations/leaf-cyan-lg.png", class: "bg-shape-6"%>
+</section>
+
+<section class="section pt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <%= raw(profile_settings[:about]) %>
+      </div>
+      <div class="col-md-4 text-center drag-lg-top">
+        <div class="shadow-down mb-4">
+          <%= image_tag "about/author.jpg", class: "img-fluid w-100 rounded-lg border-thick border-white"%>
+        </div>
+        <%= image_tag "about/signature.jpeg", class: "img-fluid"%>
+        <h4><%="#{profile_settings[:first_name]} #{profile_settings[:last_name]}"%></h4>
+      </div>
+    </div>
+  </div>
+</section>

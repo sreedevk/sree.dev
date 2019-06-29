@@ -80,9 +80,8 @@ $(document).on('turbolinks:render', function() {
 
 })(jQuery);
 
-$(document).ready(function(){
+$(document).on("ready, turbolinks:load", function(){
   // testimonial-slider
-
   $('.testimonial-slider').slick({
     dots: true,
     infinite: true,

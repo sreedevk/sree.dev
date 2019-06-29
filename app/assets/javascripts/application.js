@@ -12,8 +12,8 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
 //= require jquery/dist/jquery
+//= require turbolinks
 //= require bootstrap/dist/js/bootstrap
 //= require bootstrap/dist/js/bootstrap
 //= require nprogress/nprogress

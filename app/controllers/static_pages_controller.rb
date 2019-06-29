@@ -9,6 +9,9 @@ class StaticPagesController < ApplicationController
     @projects = Project.all
   end
 
+  def about
+  end
+
   def receive_message
     @message = Message.create(message_params)
     if (@message.persisted? && @message.errors.blank?)
