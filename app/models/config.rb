@@ -11,6 +11,8 @@ class Config < ApplicationRecord
     settings = self.find_by(config_type: config_type)&.settings 
     if settings.is_a?(Hash)
       return settings.to_h.with_indifferent_access
+    elsif settings.is_a?(Array) && settings.all?{|setting_obj| setting_obj.is_a? Hash }
+      return settings.map(&:with_indifferent_access)
     else
       return settings
     end

@@ -7,6 +7,14 @@ module ApplicationHelper
     Config.menu
   end
 
+  def social_settings
+    Config.social
+  end
+
+  def generate_social_url(setting)
+    setting[:url] % setting[:identifier]
+  end
+
   def format_link_options(link_options)
     raw(link_options.join(' '))
   end
