@@ -1,0 +1,5 @@
+NProgress.done();
+$('.contact-footer-form-container').html("<h3> Your Message Has been sent Successfully! </h3>");
+setTimeout(function(){
+  $('.contact-footer-form-container').html("<%=escape_javascript(render partial: "layouts/main_contact_form")%>");
+}, 3000);

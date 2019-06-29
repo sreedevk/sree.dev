@@ -1,0 +1,25 @@
+<%if projects.present? %>
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-title">Projects</h2>
+      </div>
+    </div>
+    <div class="row shuffle-wrapper">
+      <% projects.each do |project|%> 
+        <div class="col-lg-4 col-6 mb-4 shuffle-item">
+          <div class="position-relative rounded hover-wrapper">
+            <%= image_tag project.image, class: "img-fluid rounded w-100" %>
+            <div class="hover-overlay">
+              <div class="hover-content">
+                <a class="btn btn-light btn-sm" href="<%=project.url%>">view project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+<% end %>

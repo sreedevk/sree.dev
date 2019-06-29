@@ -1,28 +1,30 @@
-<section class="section bg-primary position-relative testimonial-bg-shapes">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 text-center">
-        <h2 class="section-title text-white mb-5">Testimonials</h2>
-      </div>
-      <div class="col-lg-10 mx-auto testimonial-slider">
-        <!-- slider-item -->
-        <%testimonials.each do |testimonial|%>
-        <div class="text-center testimonial-content">
-          <i class="ti-quote-right text-white icon mb-4 d-inline-block"></i>
-          <p class="text-white mb-4"><%=testimonial.content%></p>
-          <%= testimonial_author_image(testimonial) %>
-          <h4 class="text-white"><%=testimonial.author%></h4>
-          <h6 class="text-light mb-4"><%=testimonial.author_designation%>, <%=testimonial.author_employer%></h6>
+<% if @testimonials.present? %>
+  <section class="section bg-primary position-relative testimonial-bg-shapes">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="section-title text-white mb-5">Testimonials</h2>
         </div>
-        <% end %>
+        <div class="col-lg-10 mx-auto testimonial-slider">
+          <!-- slider-item -->
+          <%testimonials.each do |testimonial|%>
+            <div class="text-center testimonial-content">
+              <i class="ti-quote-right text-white icon mb-4 d-inline-block"></i>
+              <p class="text-white mb-4"><%=testimonial.content%></p>
+              <%= testimonial_author_image(testimonial) %>
+              <h4 class="text-white"><%=testimonial.author%></h4>
+              <h6 class="text-light mb-4"><%=testimonial.author_designation%>, <%=testimonial.author_employer%></h6>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- bg shapes -->
-  <%= image_tag "backgrounds/map.png", class: "img-fluid bg-map" %>
-  <%#= image_tag "illustrations/dots-group-v.png", class: "img-fluid bg-shape-1img-fluid bg-map" %>
-  <%= image_tag "illustrations/leaf-orange.png", class: "img-fluid bg-shape-2" %>
-  <%= image_tag "illustrations/dots-group-sm.png", class: "img-fluid bg-shape-3" %>
-  <%= image_tag "illustrations/leaf-pink-round.png", class: "img-fluid bg-shape-4" %>
-  <%= image_tag "illustrations/leaf-cyan.png", class: "img-fluid bg-shape-5" %>
-</section>
+    <!-- bg shapes -->
+    <%= image_tag "backgrounds/map.png", class: "img-fluid bg-map" %>
+    <%#= image_tag "illustrations/dots-group-v.png", class: "img-fluid bg-shape-1img-fluid bg-map" %>
+    <%= image_tag "illustrations/leaf-orange.png", class: "img-fluid bg-shape-2" %>
+    <%= image_tag "illustrations/dots-group-sm.png", class: "img-fluid bg-shape-3" %>
+    <%= image_tag "illustrations/leaf-pink-round.png", class: "img-fluid bg-shape-4" %>
+    <%= image_tag "illustrations/leaf-cyan.png", class: "img-fluid bg-shape-5" %>
+  </section>
+<% end %>

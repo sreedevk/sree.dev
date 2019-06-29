@@ -1,0 +1,26 @@
+<% if blog_posts.present? %>
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="section-title">Blogs</h2>
+        </div>
+        <% blog_posts.each do |post|%>
+          <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+            <article class="card blog_post_card shadow">
+              <%= image_tag post.image, class: "rounded card-img-top", style: "height: 300px;" %>
+              <div class="card-body">
+                <h4 class="card-title"><a class="text-dark" href="blog-single.html"><%=post.title%></a>
+                </h4>
+                <p class="card-text"><%=post.abstract%></p>
+              </div>
+              <div class="card-footer" style="padding: 0px;">
+                <a href="<%=post.url%>" target="_blank" class="btn btn-sm form-control btn-tertiary" style="padding-top: 15px;">Read More</a>
+              </div>
+            </article>
+          </div>
+        <% end %>  
+      </div>
+    </div>
+  </section>
+<% end %>

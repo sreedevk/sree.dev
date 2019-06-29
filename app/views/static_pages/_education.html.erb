@@ -1,0 +1,27 @@
+<%if education.present? %>
+<section class="section position-relative">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-title">Education</h2>
+      </div>
+      <% education.each do |edu|%> 
+        <div class="col-lg-6 col-md-6 mb-80">
+          <div class="d-flex">
+            <div class="mr-lg-5 mr-3">
+              <i class="ti-medall icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
+            </div>
+            <div>
+              <p class="text-dark mb-1"><%=edu.date_of_graduation.strftime('%Y')%></p>
+              <h4><%=edu.course%></h4>
+              <p class="mb-0 text-light"><%=edu.institution%><i><%=edu.location%></i></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <!-- bg image -->
+  <%= image_tag "backgrounds/education-bg.png", class: "img-fluid edu-bg-image w-100" %>
+</section>
+<% end %>

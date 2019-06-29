@@ -15,7 +15,8 @@ gem 'mysql2'
 
 
 group :development, :test do
-  gem 'pry', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry'
+  gem 'pry-byebug'
 end
 
 group :development do
