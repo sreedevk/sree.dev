@@ -5,24 +5,24 @@
         <div class="col-md-4">
           <h5 class="text-light">Email</h5>
           <p class="text-white paragraph-lg font-secondary">
-            <a href="mailto:sreedev@icloud.com" class="text-white"><%=profile_settings[:email]%></a>
+            <a href="mailto:<%=profile_settings[:email]%>" class="text-white"><%=profile_settings[:email]%></a>
           </p>
         </div>
         <div class="col-md-4">
           <h5 class="text-light">Phone</h5>
           <p class="text-white paragraph-lg font-secondary">
-            <a href="tel:+919600928275" class="text-white">+91 9600-928275</a>
+            <a href="tel:<%=profile_settings[:mobile]%>" class="text-white"><%=profile_settings[:mobile]%></a>
           </p>
         </div>
         <div class="col-md-4">
           <h5 class="text-light">Address</h5>
-          <p class="text-white paragraph-lg font-secondary">Bengaluru, India.</p>
+          <p class="text-white paragraph-lg font-secondary"><%=profile_settings[:address]%></p>
         </div>
       </div>
     </div>
   </div>
   <div class="border-top text-center border-dark py-5">
-    <p class="mb-0 text-light">Sreedev Kodichath &copy; <script>
+    <p class="mb-0 text-light"><%="#{profile_settings[:first_name]} #{profile_settings[:last_name]}"%> &copy; <script>
         var CurrentYear = new Date().getFullYear()
         document.write(CurrentYear)
     </script> All Rights Reserved</p>
