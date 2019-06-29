@@ -9,7 +9,7 @@ Config.find_or_create_by(config_type: Config::SOCIAL).update(
 
 Config.find_or_create_by(config_type: Config::MENU).update(
   settings: [
-    { display_name: "Home", url: "/index", link_options: [] },
+    { display_name: "Home", url: "/", link_options: [] },
     { display_name: "About", url: "/about", link_options: [] },
     { display_name: "Blog", url: "https://www.devtechnica.com", link_options: ["target=\"_blank\""] },
     { display_name: "Resume", url: "https://www.devtechnica.com", link_options: ["download", "style=\"color: #FA9E2E;\""] },
