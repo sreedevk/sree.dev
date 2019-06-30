@@ -10,7 +10,7 @@
       <ul class="navbar-nav ml-auto">
         <% navigation_items.each do |nav_item|%> 
           <li class="nav-item active">
-            <a class="nav-link" href="<%=nav_item['url']%>" data-turbolinks="false" <%=format_link_options(nav_item['link_options'])%>>
+            <a class="nav-link" href="<%=nav_item['url']%>" data-turbolinks="true" <%=format_link_options(nav_item['link_options'])%>>
               <%=nav_item['display_name']%>
             </a>
           </li>
