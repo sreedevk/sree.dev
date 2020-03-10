@@ -50,7 +50,7 @@ CareerSnapshot.find_or_create_by(company_name: "Infineye Technologies", date_of_
   location: "TN, IN.",
   designation: "Software Developer",
   logo: "experience/icon-1.png",
-  order: 1,
+  order: 4,
   visible: true
 )
 
@@ -59,16 +59,25 @@ CareerSnapshot.find_or_create_by( company_name: "HousingMan.com", date_of_joinin
   location: "KA, IN.",
   designation: "Software Engineer",
   logo: "experience/icon-2.png",
-  order: 2,
+  order: 3,
   visible: true
 )
 
 CareerSnapshot.find_or_create_by( company_name: "Riskcovry.com (UMBO IDTech Pvt. Ltd)", date_of_joining: Date.strptime("18-02-2019", "%d-%m-%Y")).update(
-  date_of_resignation: nil,
+  date_of_resignation: DateTime.strptime("20/01/2020", "%d/%m/%Y"),
   location: "KA, IN.",
   designation: "Software Engineer",
   logo: "experience/icon-3.png",
-  order: 3,
+  order: 2,
+  visible: true
+)
+
+CareerSnapshot.find_or_create_by( company_name: "Tarka Labs (Sedin Technologies)", date_of_joining: Date.strptime("22-02-2020", "%d-%m-%Y")).update(
+  date_of_resignation: nil,
+  location: "KA, IN.",
+  designation: "Senior Software Engineer",
+  logo: "experience/icon-1.png",
+  order: 1,
   visible: true
 )
 
